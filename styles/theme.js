@@ -1,10 +1,11 @@
 import { extendTheme, chakra } from "@chakra-ui/react";
 import { theme as chakraTheme } from "@chakra-ui/react";
-import { createBreakpoints } from "@chakra-ui/theme-tools";
+import { createBreakpoints, mode } from "@chakra-ui/theme-tools";
 
 const fonts = {
   ...chakraTheme.fonts,
-  heading: `'Cormorant Unicase'`
+  heading: `'Roboto Mono', monospace;`,
+  body: `'Roboto Mono', monospace;`
 };
 
 const breakpoints = createBreakpoints({
@@ -14,10 +15,19 @@ const breakpoints = createBreakpoints({
   "2xl": "70em"
 });
 
+const styles = {
+  global: props => ({
+    body: {
+      bg: mode("gray.200", "gray.800")(props)
+    }
+  })
+};
+
 const overrides = {
   ...chakraTheme,
   fonts,
   breakpoints,
+  styles,
   fontWeights: {
     normal: 300,
     medium: 600,
