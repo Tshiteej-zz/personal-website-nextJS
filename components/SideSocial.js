@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Box, useColorMode, Divider, Center } from "@chakra-ui/react";
+import { Flex, Box, useColorMode, Divider } from "@chakra-ui/react";
 
 import { FaGithub, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
@@ -32,7 +32,6 @@ function SideSocial() {
         as='a'
         href='https://github.com/Tshiteej'
         target='_blank'
-        // _hover={{ width: "20px" }}
       >
         <FaGithub />
       </MBox>
@@ -42,7 +41,6 @@ function SideSocial() {
         as='a'
         href='https://twitter.com/tbhardwaj97'
         target='_blank'
-        // _hover={{ width: "20px" }}
       >
         <FaTwitter />
       </MBox>
@@ -52,7 +50,6 @@ function SideSocial() {
         as='a'
         href='https://www.instagram.com/tshiteej/'
         target='_blank'
-        // _hover={{ width: "20px" }}
       >
         <FaInstagram />
       </MBox>
@@ -62,7 +59,6 @@ function SideSocial() {
         as='a'
         href='https://www.linkedin.com/in/tshiteej/'
         target='_blank'
-        // _hover={{ width: "20px" }}
       >
         <FaLinkedinIn />
       </MBox>

@@ -3,10 +3,7 @@ import {
   List,
   ListItem,
   ListIcon,
-  MdCheckCircle,
-  useColorMode,
   Heading,
-  Text,
   Flex,
   Stack,
   Image,
@@ -14,7 +11,6 @@ import {
   Divider,
   Link
 } from "@chakra-ui/react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
 import {
   FaBriefcase,
   FaBusinessTime,

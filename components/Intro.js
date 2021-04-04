@@ -3,19 +3,15 @@ import {
   List,
   ListItem,
   ListIcon,
-  MdCheckCircle,
-  useColorMode,
   Heading,
   Text,
   Flex,
   Stack,
-  Image,
   Box,
-  Divider,
-  Link
+  Divider
 } from "@chakra-ui/react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { FaCheckCircle } from "react-icons/fa";
+
 function Intro() {
   return (
     <Flex id='about' direction='column' mb={250}>

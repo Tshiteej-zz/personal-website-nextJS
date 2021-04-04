@@ -1,31 +1,17 @@
 import React from "react";
 import {
-  List,
-  ListItem,
-  ListIcon,
-  MdCheckCircle,
   useColorMode,
   Heading,
   Text,
   Flex,
-  Stack,
   Image,
   Box,
-  Badge,
   Divider,
-  Spacer,
-  Link,
   TagLabel,
   Tag,
   SimpleGrid
 } from "@chakra-ui/react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
-import {
-  FaBriefcase,
-  FaBusinessTime,
-  FaLocationArrow,
-  FaExternalLinkAlt
-} from "react-icons/fa";
+
 import { motion } from "framer-motion";
 
 const MBox = motion(Box);
@@ -37,19 +23,12 @@ function Projects() {
       <Heading>Projects</Heading>
       <Divider borderColor='gray.500' />
       <SimpleGrid
-        // justify='space-between'
-        // direction={["column", "row"]}
-        // w='70vw'
-        // mt={20}
         columns={[1, 2]}
         spacingX={[5, "120px"]}
         spacingY={[5, 10]}
         ml={[0, "10vw"]}
       >
         <Box
-          //   maxW='sm'
-          //   as='a'
-          //   href='ww.google.com'
           borderWidth='1px'
           borderRadius='lg'
           overflowX='visible'
@@ -68,26 +47,15 @@ function Projects() {
               alt='image'
             />
           </Box>
-          <Text
-            mt='1'
-            fontWeight='semibold'
-            // as='h6'
-            // lineHeight='tight'
-            // isTruncated
-            p={2}
-            align='center'
-          >
+          <Text mt='1' fontWeight='semibold' p={2} align='center'>
             Personal Website
           </Text>
           <MBox
             whileHover={{ x: "30px", y: "-30px", scale: 1.2 }}
             mr={[0, "-55px"]}
-            // borderColor='red'
-            // borderWidth='2px'
             borderRadius='15px'
             bgColor={colorMode == "dark" ? "gray.700" : "gray.100"}
             boxShadow='dark-xl'
-            // h={20}
           >
             <Box pt='2' pl='3' pb='3' justify='right'>
               As a attempt to learn NextJS and Chakra-UI, I came up with this
@@ -150,12 +118,7 @@ function Projects() {
             </MTag>
           </Box>
         </Box>
-
-        {/* <Divider borderColor='red' /> */}
         <Box
-          //   maxW='sm'
-          //   as='a'
-          //   href='ww.google.com'
           borderWidth='1px'
           borderRadius='lg'
           overflowX='visible'
@@ -175,26 +138,15 @@ function Projects() {
               alt='image'
             />
           </Box>
-          <Text
-            mt='1'
-            fontWeight='semibold'
-            // as='h6'
-            // lineHeight='tight'
-            // isTruncated
-            p={2}
-            align='center'
-          >
+          <Text mt='1' fontWeight='semibold' p={2} align='center'>
             Spotify Clone
           </Text>
           <MBox
             whileHover={{ x: "30px", y: "-30px", scale: 1.2 }}
             ml={[0, "-55px"]}
-            // borderColor='red'
-            // borderWidth='2px'
             borderRadius='15px'
             bgColor={colorMode == "dark" ? "gray.700" : "gray.100"}
             boxShadow='dark-xl'
-            // h={20}
           >
             <Box pt='2' pl='3' pb='3' justify='right'>
               As an attempt to learn React and SCSS, created a clone of one of
@@ -239,9 +191,6 @@ function Projects() {
         </Box>
 
         <Box
-          //   maxW='sm'
-          //   as='a'
-          //   href='ww.google.com'
           borderWidth='1px'
           borderRadius='lg'
           overflowX='visible'
@@ -260,26 +209,15 @@ function Projects() {
               alt='image'
             />
           </Box>
-          <Text
-            mt='1'
-            fontWeight='semibold'
-            // as='h6'
-            // lineHeight='tight'
-            // isTruncated
-            p={2}
-            align='center'
-          >
+          <Text mt='1' fontWeight='semibold' p={2} align='center'>
             NIT Sikkim domain website
           </Text>
           <MBox
             whileHover={{ x: "30px", y: "-30px", scale: 1.2 }}
             mr={[0, "-55px"]}
-            // borderColor='red'
-            // borderWidth='2px'
             borderRadius='15px'
             bgColor={colorMode == "dark" ? "gray.700" : "gray.100"}
             boxShadow='dark-xl'
-            // h={20}
           >
             <Box pt='2' pl='3' pb='3' justify='right'>
               As a technical lead of the WDC, created the present NIT Sikkim
@@ -342,113 +280,6 @@ function Projects() {
             </MTag>
           </Box>
         </Box>
-
-        {/* <Divider borderColor='red' /> */}
-        {/* <Box
-          //   maxW='sm'
-          //   as='a'
-          //   href='ww.google.com'
-          borderWidth='1px'
-          borderRadius='lg'
-          overflowX='visible'
-          mt={[6, "130px"]}
-          h='450px'
-          w='300px'
-          boxShadow='dark-lg'
-          justify='flex-end'
-          mr={0}
-        >
-          <Box w='300px' h='210px'>
-            <Image
-              w='298px'
-              h='inherit'
-              borderRadius='10px'
-              src='https://images.unsplash.com/photo-1559336197-ded8aaa244bc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2806&q=80'
-              alt='image'
-            />
-          </Box>
-          <Text
-            mt='1'
-            fontWeight='semibold'
-            // as='h6'
-            // lineHeight='tight'
-            // isTruncated
-            p={2}
-            align='center'
-          >
-            Personal Website
-          </Text>
-          <MBox
-            whileHover={{ x: "30px", y: "-30px", scale: 1.2 }}
-            ml={[0, "-55px"]}
-            // borderColor='red'
-            // borderWidth='2px'
-            borderRadius='15px'
-            bgColor={colorMode == "dark" ? "gray.700" : "gray.100"}
-            boxShadow='dark-xl'
-            // h={20}
-          >
-            <Box pt='2' pl='3' pb='3' justify='right'>
-              Ever thought of solving a problem with regex and ended up with 2
-              problems. No more!
-            </Box>
-          </MBox>
-          <Text ml={2} mt={2}>
-            Stack:
-          </Text>
-          <Box mt='2' ml='3'>
-            <MTag
-              size='sm'
-              variant='outline'
-              colorScheme='teal'
-              mx={1}
-              mb={2}
-              whileHover={{ scale: 1.2 }}
-            >
-              <TagLabel>NextJS</TagLabel>
-            </MTag>
-            <MTag
-              size='sm'
-              variant='outline'
-              colorScheme='teal'
-              mx={1}
-              mb={2}
-              whileHover={{ scale: 1.2 }}
-            >
-              <TagLabel>Chakra-UI</TagLabel>
-            </MTag>
-            <MTag
-              size='sm'
-              variant='outline'
-              colorScheme='teal'
-              mx={1}
-              mb={2}
-              whileHover={{ scale: 1.2 }}
-            >
-              <TagLabel>ReactJS</TagLabel>
-            </MTag>
-            <MTag
-              size='sm'
-              variant='outline'
-              colorScheme='teal'
-              mx={1}
-              mb={2}
-              whileHover={{ scale: 1.2 }}
-            >
-              <TagLabel>HTML</TagLabel>
-            </MTag>
-            <MTag
-              size='sm'
-              variant='outline'
-              colorScheme='teal'
-              mx={1}
-              mb={2}
-              whileHover={{ scale: 1.2 }}
-            >
-              <TagLabel>CSS</TagLabel>
-            </MTag>
-          </Box>
-        </Box> */}
       </SimpleGrid>
     </Flex>
   );

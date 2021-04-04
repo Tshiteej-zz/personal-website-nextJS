@@ -1,19 +1,11 @@
 import Head from "next/head";
-import {
-  useColorMode,
-  Heading,
-  Text,
-  Flex,
-  Stack,
-  Image,
-  Box
-} from "@chakra-ui/react";
+import { useColorMode, Stack } from "@chakra-ui/react";
 
 import Container from "../components/Container";
 import Top from "../components/Top";
 import Intro from "../components/Intro";
 import Experience from "../components/Experience";
-import Quote from "../components/Quote";
+// import Quote from "../components/Quote";
 import Blogs from "../components/Blogs";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
@@ -21,10 +13,6 @@ import Connect from "../components/Connect";
 
 export default function Index() {
   const { colorMode } = useColorMode();
-  const colorSecondary = {
-    light: "gray.700",
-    dark: "gray.400"
-  };
   return (
     <>
       <Container>

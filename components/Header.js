@@ -2,21 +2,15 @@ import React from "react";
 import NextLink from "next/link";
 
 import {
-  Button,
   Box,
   Heading,
   Flex,
-  Text,
   useColorMode,
   Switch,
   Spacer,
   useColorModeValue
 } from "@chakra-ui/react";
 
-const navHoverBg = {
-  light: "gray.600",
-  dark: "gray.300"
-};
 const color = {
   light: "black",
   dark: "white"

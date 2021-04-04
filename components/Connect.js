@@ -1,29 +1,6 @@
 import React from "react";
-import {
-  List,
-  ListItem,
-  ListIcon,
-  MdCheckCircle,
-  useColorMode,
-  Heading,
-  Text,
-  Flex,
-  Stack,
-  Image,
-  Box,
-  Button,
-  Divider,
-  Spacer,
-  Link,
-  EmailIcon
-} from "@chakra-ui/react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
-import {
-  FaBriefcase,
-  FaMailBulk,
-  FaLocationArrow,
-  FaExternalLinkAlt
-} from "react-icons/fa";
+import { useColorMode, Text, Flex, Box, Button } from "@chakra-ui/react";
+import { FaMailBulk } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const MButton = motion(Button);

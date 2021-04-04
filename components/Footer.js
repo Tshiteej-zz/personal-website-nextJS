@@ -1,22 +1,6 @@
 import React from "react";
-import {
-  List,
-  ListItem,
-  ListIcon,
-  MdCheckCircle,
-  useColorMode,
-  Heading,
-  Text,
-  Flex,
-  Stack,
-  Image,
-  Box,
-  Badge,
-  Divider,
-  Spacer,
-  Link
-} from "@chakra-ui/react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { useColorMode, Text, Flex, Box, Divider } from "@chakra-ui/react";
+
 import { FaGithub, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 function Footer() {
   const { colorMode } = useColorMode();
