@@ -3,10 +3,14 @@ import { Flex, Box, useColorMode, Divider, Center } from "@chakra-ui/react";
 
 import { FaGithub, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
+import { motion } from "framer-motion";
+
 const color = {
   light: "black",
   dark: "white"
 };
+
+const MBox = motion(Box);
 
 function SideSocial() {
   const { colorMode } = useColorMode();
@@ -22,44 +26,51 @@ function SideSocial() {
       ml={10}
       display={["none", "flex", "flex"]}
     >
-      <Box
+      <MBox
+        whileHover={{ scale: 1.5, y: "-10px", color: "teal" }}
         my={4}
         as='a'
         href='https://github.com/Tshiteej'
         target='_blank'
-        _hover={{ width: "20px" }}
+        // _hover={{ width: "20px" }}
       >
         <FaGithub />
-      </Box>
-      <Box
+      </MBox>
+      <MBox
+        whileHover={{ scale: 1.5, y: "-10px", color: "teal" }}
         my={4}
         as='a'
         href='https://twitter.com/tbhardwaj97'
         target='_blank'
-        _hover={{ width: "20px" }}
+        // _hover={{ width: "20px" }}
       >
         <FaTwitter />
-      </Box>
-      <Box
+      </MBox>
+      <MBox
+        whileHover={{ scale: 1.5, y: "-10px", color: "teal" }}
         my={4}
         as='a'
         href='https://www.instagram.com/tshiteej/'
         target='_blank'
-        _hover={{ width: "20px" }}
+        // _hover={{ width: "20px" }}
       >
         <FaInstagram />
-      </Box>
-      <Box
+      </MBox>
+      <MBox
+        whileHover={{ scale: 1.5, y: "-10px", color: "teal" }}
         my={4}
         as='a'
         href='https://www.linkedin.com/in/tshiteej/'
         target='_blank'
-        _hover={{ width: "20px" }}
+        // _hover={{ width: "20px" }}
       >
         <FaLinkedinIn />
-      </Box>
+      </MBox>
       <Box height='150px' mr={2}>
-        <Divider orientation='vertical' borderColor='gray.500' />
+        <Divider
+          orientation='vertical'
+          borderColor={colorMode == "light" ? "gray.500" : "gray.700"}
+        />
       </Box>
     </Flex>
   );

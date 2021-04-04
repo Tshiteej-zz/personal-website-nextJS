@@ -23,7 +23,7 @@ import {
 } from "react-icons/fa";
 function Experience() {
   return (
-    <Flex id='experience' direction='column'>
+    <Flex id='experience' direction='column' mb={250}>
       <Heading>Experience</Heading>
       <Divider borderColor='gray.500' />
       <Flex
@@ -101,8 +101,7 @@ function Experience() {
               </ListItem>
               <ListItem>
                 <ListIcon as={FaLocationArrow} color='teal.600' />
-                Built Inventory management portal for the procurement of
-                Param-Shavak
+                Built Inventory management portal
               </ListItem>
               <ListItem>
                 <ListIcon as={FaExternalLinkAlt} color='teal.600' />

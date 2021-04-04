@@ -24,6 +24,9 @@ import {
   FaLocationArrow,
   FaExternalLinkAlt
 } from "react-icons/fa";
+import { motion } from "framer-motion";
+
+const MButton = motion(Button);
 function Connect() {
   const { colorMode } = useColorMode();
   return (
@@ -41,7 +44,7 @@ function Connect() {
           Want to discuss tech, comics, anime or have a project in mind! <br />
           Would love to connect!
         </Text>
-        <Button
+        <MButton
           as='a'
           href='mailto:tbhardwaj97@gmail.com'
           target='_blank'
@@ -49,9 +52,10 @@ function Connect() {
           colorScheme='teal'
           variant='outline'
           size='lg'
+          whileHover={{ scale: 1.2 }}
         >
           Connect
-        </Button>
+        </MButton>
       </Box>
     </Flex>
   );

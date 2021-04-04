@@ -33,6 +33,7 @@ function Footer() {
       justify='center'
     >
       <Box align='center' justify='center' display={["flex", "none"]}>
+        <Divider borderColor='gray.500' />
         <Box
           my={4}
           mx={4}

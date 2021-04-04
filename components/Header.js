@@ -59,7 +59,7 @@ const Header = props => {
 
       <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>
         <svg
-          fill='white'
+          fill={colorMode == "dark" ? "white" : "black"}
           width='12px'
           viewBox='0 0 20 20'
           xmlns='http://www.w3.org/2000/svg'
@@ -80,7 +80,7 @@ const Header = props => {
         // flexGrow={1}
         direction={{ sm: "row", md: "column" }}
       >
-        <NextLink href='/' passHref>
+        {/* <NextLink href='/' passHref>
           <Button
             as='a'
             variant='ghost'
@@ -123,7 +123,7 @@ const Header = props => {
           >
             Contact
           </Button>
-        </NextLink>
+        </NextLink> */}
       </Box>
 
       <Box

@@ -23,17 +23,26 @@ import {
   FaLocationArrow,
   FaExternalLinkAlt
 } from "react-icons/fa";
+import { motion } from "framer-motion";
+
+const MBox = motion(Box);
 function Blogs() {
   const { colorMode } = useColorMode();
   return (
-    <Flex id='blogs' direction='column'>
+    <Flex id='blogs' direction='column' mb={250}>
       <Heading>Recent Articles</Heading>
       <Divider borderColor='gray.500' />
-      <Flex justify='space-evenly' direction={["column", "row"]} w='70vw'>
-        <Box
+      <Flex
+        justify='space-evenly'
+        direction={["column", "row"]}
+        w='70vw'
+        mt={20}
+      >
+        <MBox
           //   maxW='sm'
           //   as='a'
           //   href='ww.google.com'
+          whileHover={{ scale: 1.2, y: "-30px" }}
           borderWidth='1px'
           borderRadius='lg'
           overflow='hidden'
@@ -80,10 +89,11 @@ function Blogs() {
               problems. No more!
             </Box>
           </Box>
-        </Box>
+        </MBox>
 
-        <Box
+        <MBox
           //   maxW='sm'
+          whileHover={{ scale: 1.2, y: "-30px" }}
           borderWidth='1px'
           borderRadius='lg'
           overflow='hidden'
@@ -130,12 +140,13 @@ function Blogs() {
               problems now. No more!
             </Box>
           </Box>
-        </Box>
+        </MBox>
 
-        <Box
+        <MBox
           //   maxW='sm'
           //   as='a'
           //   href='ww.google.com'
+          whileHover={{ scale: 1.2, y: "-30px" }}
           borderWidth='1px'
           borderRadius='lg'
           overflow='hidden'
@@ -182,7 +193,7 @@ function Blogs() {
               problems. No more!
             </Box>
           </Box>
-        </Box>
+        </MBox>
       </Flex>
     </Flex>
   );

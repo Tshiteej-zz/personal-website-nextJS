@@ -25,13 +25,17 @@ import {
   FaLocationArrow,
   FaExternalLinkAlt
 } from "react-icons/fa";
+import { motion } from "framer-motion";
+
+const MBox = motion(Box);
+const MTag = motion(Tag);
 function Projects() {
   const { colorMode } = useColorMode();
   return (
-    <Flex id='projects' direction='column'>
+    <Flex id='projects' direction='column' mb={250}>
       <Heading>Projects</Heading>
       <Divider borderColor='gray.500' />
-      <Flex justify='' direction={["column", "row"]} w='70vw'>
+      <Flex justify='' direction={["column", "row"]} w='70vw' mt={20}>
         <Box
           //   maxW='sm'
           //   as='a'
@@ -40,7 +44,7 @@ function Projects() {
           borderRadius='lg'
           overflowX='visible'
           mt={6}
-          h='500px'
+          h='450px'
           w='250px'
           boxShadow='dark-lg'
         >
@@ -64,7 +68,8 @@ function Projects() {
           >
             Personal Website
           </Text>
-          <Box
+          <MBox
+            whileHover={{ x: "30px", y: "-30px", scale: 1.2 }}
             mr={[-20, "-55px"]}
             // borderColor='red'
             // borderWidth='2px'
@@ -77,26 +82,61 @@ function Projects() {
               Ever thought of solving a problem with regex and ended up with 2
               problems. No more!
             </Box>
-          </Box>
+          </MBox>
           <Text ml={2} mt={2}>
             Stack:
           </Text>
           <Box mt='2' ml='3'>
-            <Tag size='sm' variant='outline' colorScheme='teal' mx={1} mb={2}>
+            <MTag
+              size='sm'
+              variant='outline'
+              colorScheme='teal'
+              mx={1}
+              mb={2}
+              whileHover={{ scale: 1.2 }}
+            >
               <TagLabel>NextJS</TagLabel>
-            </Tag>
-            <Tag size='sm' variant='outline' colorScheme='teal' mx={1} mb={2}>
+            </MTag>
+            <MTag
+              size='sm'
+              variant='outline'
+              colorScheme='teal'
+              mx={1}
+              mb={2}
+              whileHover={{ scale: 1.2 }}
+            >
               <TagLabel>Chakra-UI</TagLabel>
-            </Tag>
-            <Tag size='sm' variant='outline' colorScheme='teal' mx={1} mb={2}>
+            </MTag>
+            <MTag
+              size='sm'
+              variant='outline'
+              colorScheme='teal'
+              mx={1}
+              mb={2}
+              whileHover={{ scale: 1.2 }}
+            >
               <TagLabel>ReactJS</TagLabel>
-            </Tag>
-            <Tag size='sm' variant='outline' colorScheme='teal' mx={1} mb={2}>
+            </MTag>
+            <MTag
+              size='sm'
+              variant='outline'
+              colorScheme='teal'
+              mx={1}
+              mb={2}
+              whileHover={{ scale: 1.2 }}
+            >
               <TagLabel>HTML</TagLabel>
-            </Tag>
-            <Tag size='sm' variant='outline' colorScheme='teal' mx={1} mb={2}>
+            </MTag>
+            <MTag
+              size='sm'
+              variant='outline'
+              colorScheme='teal'
+              mx={1}
+              mb={2}
+              whileHover={{ scale: 1.2 }}
+            >
               <TagLabel>CSS</TagLabel>
-            </Tag>
+            </MTag>
           </Box>
         </Box>
       </Flex>
