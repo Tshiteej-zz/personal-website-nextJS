@@ -85,7 +85,7 @@ const Header = props => {
             as='a'
             variant='ghost'
             p={[1, 2, 4]}
-            _hover={{ backgroundColor: navHoverBg[colorMode] }}
+            _hover={{ border: "1px", borderColor: navHoverBg[colorMode] }}
             color={color[colorMode]}
           >
             About
@@ -96,7 +96,7 @@ const Header = props => {
             as='a'
             variant='ghost'
             p={[1, 2, 4]}
-            _hover={{ backgroundColor: navHoverBg[colorMode] }}
+            _hover={{ border: "1px", borderColor: navHoverBg[colorMode] }}
             color={color[colorMode]}
           >
             Experience
@@ -107,7 +107,7 @@ const Header = props => {
             as='a'
             variant='ghost'
             p={[1, 2, 4]}
-            _hover={{ backgroundColor: navHoverBg[colorMode] }}
+            _hover={{ border: "1px", borderColor: navHoverBg[colorMode] }}
             color={color[colorMode]}
           >
             Work
@@ -118,7 +118,7 @@ const Header = props => {
             as='a'
             variant='ghost'
             p={[1, 2, 4]}
-            _hover={{ backgroundColor: navHoverBg[colorMode] }}
+            _hover={{ border: "1px", borderColor: navHoverBg[colorMode] }}
             color={color[colorMode]}
           >
             Contact

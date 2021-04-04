@@ -1,5 +1,9 @@
 import React from "react";
 import {
+  List,
+  ListItem,
+  ListIcon,
+  MdCheckCircle,
   useColorMode,
   Heading,
   Text,
@@ -11,23 +15,50 @@ import {
   Link
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { FaCheckCircle } from "react-icons/fa";
 function Intro() {
   return (
-    <Flex pt={8} id='about' direction='column'>
+    <Flex id='about' direction='column' mb={250}>
       <Heading>About</Heading>
-      <Box mt={6} w='70vw'>
+      <Divider borderColor='gray.500' />
+      <Box w='70vw' lineHeight='8' mt={20}>
         Hello Everyone! <br />
-        My name is Tshiteej Bhardwaj and I love creating things for the web.
-        Currently working as a Senior Software Engineer at{" "}
-        <Link
-          colorScheme='teal'
-          href='https://yellowmessenger.com/'
-          target='_blank'
-        >
-          YellowMessenger
-          <ExternalLinkIcon mx='2px' />
-        </Link>
-        to create smart-intelligent multi-platform chatbots.
+        My name is Tshiteej Bhardwaj. I love creating things from scratch. I
+        started my journey in tech by playing "Roadrash" 😜. Jokes apart, I
+        started my journey with C++ by building small banking systems as a
+        hobby. Today, I build things for the web , mostly using JavaScript.{" "}
+        <br />
+        Currently I am working as a Senior Software Engineer at YellowMessenger.
+        <br />
+        <List spacing={5} mt={5}>
+          <Text>Most of my weapons in the arsenal includes:</Text>
+          <Stack justify='space-evenly' direction={["column", "row"]}>
+            <ListItem>
+              <ListIcon as={FaCheckCircle} color='teal.600' />
+              JavaScript
+            </ListItem>
+            <ListItem>
+              <ListIcon as={FaCheckCircle} color='teal.600' />
+              NodeJS
+            </ListItem>
+            <ListItem>
+              <ListIcon as={FaCheckCircle} color='teal.600' />
+              React
+            </ListItem>
+            <ListItem>
+              <ListIcon as={FaCheckCircle} color='teal.600' />
+              MongoDB
+            </ListItem>
+            <ListItem>
+              <ListIcon as={FaCheckCircle} color='teal.600' />
+              Python
+            </ListItem>
+            <ListItem>
+              <ListIcon as={FaCheckCircle} color='teal.600' />
+              MySQL
+            </ListItem>
+          </Stack>
+        </List>
       </Box>
     </Flex>
   );

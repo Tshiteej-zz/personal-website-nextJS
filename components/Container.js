@@ -22,7 +22,7 @@ const Container = ({ children }) => {
   return (
     <>
       <Header />
-      <SideSocial />
+      <SideSocial alignItems='flex-end' position='fixed' />
 
       <Flex
         as='main'

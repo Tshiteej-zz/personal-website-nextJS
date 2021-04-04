@@ -59,7 +59,7 @@ function SideSocial() {
         <FaLinkedinIn />
       </Box>
       <Box height='150px' mr={2}>
-        <Divider orientation='vertical' />
+        <Divider orientation='vertical' borderColor='gray.500' />
       </Box>
     </Flex>
   );
