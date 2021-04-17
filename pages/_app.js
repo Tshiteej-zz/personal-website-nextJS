@@ -27,20 +27,6 @@ const GlobalStyle = ({ children }) => {
   );
 };
 
-// function MyApp({ Component, pageProps }) {
-//   // console.log(customTheme, "THEME");
-//   return (
-//     <ChakraProvider resetCSS theme={customTheme}>
-//       <ColorModeScript initialColorMode={"dark"} />
-//       <GlobalStyle>
-//         <Component {...pageProps} />
-//       </GlobalStyle>
-//     </ChakraProvider>
-//   );
-// }
-
-// export default MyApp;
-
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
   useEffect(() => {
