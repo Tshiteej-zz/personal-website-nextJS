@@ -28,7 +28,7 @@ export default function BlogLayout({ children, frontMatter }) {
     <>
       <Container>
         <Head>
-          <title>{frontMatter.title}</title>
+          <title>{frontMatter.title} | Tshiteej</title>
         </Head>
         <Stack
           as='article'

@@ -17,7 +17,7 @@ export default function Index() {
     <>
       <Container>
         <Head>
-          <title>Tshiteej Bhardwaj</title>
+          <title>Home | Tshiteej Bhardwaj</title>
         </Head>
         <Stack
           as='main'

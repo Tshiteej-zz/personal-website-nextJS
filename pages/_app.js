@@ -8,6 +8,9 @@ import {
 import customTheme from "../styles/theme";
 import { Global, css } from "@emotion/react";
 import { prismDarkTheme, prismLightTheme } from "../styles/prism";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
+import * as gtag from "../lib/gtag";
 
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode();
@@ -24,8 +27,32 @@ const GlobalStyle = ({ children }) => {
   );
 };
 
-function MyApp({ Component, pageProps }) {
-  // console.log(customTheme, "THEME");
+// function MyApp({ Component, pageProps }) {
+//   // console.log(customTheme, "THEME");
+//   return (
+//     <ChakraProvider resetCSS theme={customTheme}>
+//       <ColorModeScript initialColorMode={"dark"} />
+//       <GlobalStyle>
+//         <Component {...pageProps} />
+//       </GlobalStyle>
+//     </ChakraProvider>
+//   );
+// }
+
+// export default MyApp;
+
+const MyApp = ({ Component, pageProps }) => {
+  const router = useRouter();
+  useEffect(() => {
+    const handleRouteChange = url => {
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <ChakraProvider resetCSS theme={customTheme}>
       <ColorModeScript initialColorMode={"dark"} />
@@ -34,6 +61,6 @@ function MyApp({ Component, pageProps }) {
       </GlobalStyle>
     </ChakraProvider>
   );
-}
+};
 
 export default MyApp;
