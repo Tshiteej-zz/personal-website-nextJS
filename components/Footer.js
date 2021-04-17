@@ -1,7 +1,13 @@
 import React from "react";
 import { useColorMode, Text, Flex, Box, Divider } from "@chakra-ui/react";
 
-import { FaGithub, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaGithub,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+  FaStackOverflow
+} from "react-icons/fa";
 function Footer() {
   const { colorMode } = useColorMode();
   return (
@@ -9,7 +15,7 @@ function Footer() {
       id='footer'
       direction={["column", "row"]}
       mb={0}
-      mt={10}
+      mt='12vh'
       w='100%'
       h={["200px", "50px"]}
       bgColor={["inherit", colorMode == "light" ? "gray.500" : "gray.700"]}
@@ -27,6 +33,16 @@ function Footer() {
           _hover={{ width: "20px" }}
         >
           <FaGithub />
+        </Box>
+        <Box
+          my={4}
+          mx={4}
+          as='a'
+          href='https://stackoverflow.com/users/13223807/tshiteej'
+          target='_blank'
+          _hover={{ width: "20px" }}
+        >
+          <FaStackOverflow />
         </Box>
         <Box
           my={4}

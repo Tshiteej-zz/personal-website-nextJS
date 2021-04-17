@@ -1,7 +1,13 @@
 import React from "react";
 import { Flex, Box, useColorMode, Divider } from "@chakra-ui/react";
 
-import { FaGithub, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaGithub,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+  FaStackOverflow
+} from "react-icons/fa";
 
 import { motion } from "framer-motion";
 
@@ -16,7 +22,7 @@ function SideSocial() {
   const { colorMode } = useColorMode();
   return (
     <Flex
-      as='SideBarSocial'
+      as='sidessocial'
       direction='column'
       color={color[colorMode]}
       align='flex-end'
@@ -34,6 +40,15 @@ function SideSocial() {
         target='_blank'
       >
         <FaGithub />
+      </MBox>
+      <MBox
+        whileHover={{ scale: 1.5, y: "-10px", color: "teal" }}
+        my={4}
+        as='a'
+        href='https://stackoverflow.com/users/13223807/tshiteej'
+        target='_blank'
+      >
+        <FaStackOverflow />
       </MBox>
       <MBox
         whileHover={{ scale: 1.5, y: "-10px", color: "teal" }}

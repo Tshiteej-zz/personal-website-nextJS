@@ -8,7 +8,8 @@ import {
   useColorMode,
   Switch,
   Spacer,
-  useColorModeValue
+  useColorModeValue,
+  Button
 } from "@chakra-ui/react";
 
 const color = {
@@ -47,7 +48,9 @@ const Header = props => {
           letterSpacing={"-.1rem"}
           color={color[colorMode]}
         >
-          Tshiteej
+          <NextLink href='/' passHref>
+            Tshiteej
+          </NextLink>
         </Heading>
       </Flex>
 
@@ -69,34 +72,35 @@ const Header = props => {
           sm: show === true ? "flex" : "none",
           md: "flex"
         }}
+        mr={4}
         width={{ sm: "full", md: "auto" }}
         alignItems={{ base: "right", sm: "center" }}
         // flexGrow={1}
         direction={{ sm: "row", md: "column" }}
       >
+        <NextLink href='/' passHref>
+          <Button
+            as='a'
+            variant='ghost'
+            p={[1, 2, 4]}
+            _hover={{ border: "1px", borderColor: color[colorMode] }}
+            color={color[colorMode]}
+          >
+            Home
+          </Button>
+        </NextLink>
+        <NextLink href='/blog' passHref>
+          <Button
+            as='a'
+            variant='ghost'
+            p={[1, 2, 4]}
+            _hover={{ border: "1px", borderColor: color[colorMode] }}
+            color={color[colorMode]}
+          >
+            Blog
+          </Button>
+        </NextLink>
         {/* <NextLink href='/' passHref>
-          <Button
-            as='a'
-            variant='ghost'
-            p={[1, 2, 4]}
-            _hover={{ border: "1px", borderColor: navHoverBg[colorMode] }}
-            color={color[colorMode]}
-          >
-            About
-          </Button>
-        </NextLink>
-        <NextLink href='/' passHref>
-          <Button
-            as='a'
-            variant='ghost'
-            p={[1, 2, 4]}
-            _hover={{ border: "1px", borderColor: navHoverBg[colorMode] }}
-            color={color[colorMode]}
-          >
-            Experience
-          </Button>
-        </NextLink>
-        <NextLink href='/' passHref>
           <Button
             as='a'
             variant='ghost'
