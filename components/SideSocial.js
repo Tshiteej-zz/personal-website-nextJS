@@ -54,7 +54,7 @@ function SideSocial() {
         whileHover={{ scale: 1.5, y: "-10px", color: "teal" }}
         my={4}
         as='a'
-        href='https://twitter.com/tbhardwaj97'
+        href='https://twitter.com/tshiteej'
         target='_blank'
       >
         <FaTwitter />
