@@ -10,7 +10,6 @@ import {
 } from "@chakra-ui/react";
 import { jsx } from "@emotion/react";
 import NextLink from "next/link";
-import { FaChessPawn } from "react-icons/fa";
 const CustomLink = props => {
   const { colorMode } = useColorMode();
   const color = {

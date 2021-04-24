@@ -32,9 +32,20 @@ export default class MyDocument extends NextDocument {
           />
           <link
             rel='icon'
-            href='https://i.pinimg.com/originals/90/70/26/9070266c2504c2b4e5b62967ae49497c.png'
+            href='https://www.tshiteej.com/tb.png'
             type='image/icon type'
           />
+          <meta property='og:url' content='https://www.tshiteej.com/' />
+          <meta property='og:type' content='website' />
+          <meta property='og:title' content='Tshiteej Bhardwaj' />
+          <meta name='twitter:card' content='summary' />
+          <meta property='og:image' content='https://www.tshiteej.com/tb.png' />
+          <meta
+            property='og:description'
+            content='Portfolio site of Tshiteej Bhardwaj'
+          />
+          <meta name='og:keywords' content="HTML, CSS, NEXTJS, JavaScript, PHP, Python, Automation, Regex, JS" />
+          <meta name='og:author' content='Tshiteej Bhardwaj' />
         </Head>
         <body>
           <ColorModeScript />

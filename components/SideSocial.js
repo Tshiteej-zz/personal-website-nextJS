@@ -1,4 +1,6 @@
 import React from "react";
+import { useRouter } from "next/router";
+
 import { Flex, Box, useColorMode, Divider } from "@chakra-ui/react";
 
 import {
@@ -19,6 +21,8 @@ const color = {
 const MBox = motion(Box);
 
 function SideSocial() {
+  const router = useRouter();
+  const route = router.route;
   const { colorMode } = useColorMode();
   return (
     <Flex
@@ -30,7 +34,7 @@ function SideSocial() {
       position='fixed'
       bottom={0}
       ml={10}
-      display={["none", "flex", "flex"]}
+      display={route == "/blog/[slug]" ? "none" : ["none", "flex", "flex"]}
     >
       <MBox
         whileHover={{ scale: 1.5, y: "-10px", color: "teal" }}

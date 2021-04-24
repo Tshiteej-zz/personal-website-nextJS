@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+
 import {
   useColorMode,
   Heading,
@@ -7,8 +8,21 @@ import {
   Flex,
   Box,
   Avatar,
-  Stack
+  Stack,
+  Badge
 } from "@chakra-ui/react";
+
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+  WhatsappShareButton,
+  TwitterIcon,
+  WhatsappIcon,
+  LinkedinIcon,
+  FacebookIcon
+} from "react-share";
+
 import { parseISO, format } from "date-fns";
 
 import { useRouter } from "next/router";
@@ -24,11 +38,33 @@ export default function BlogLayout({ children, frontMatter }) {
   };
   const router = useRouter();
   const slug = router.asPath.replace("/blog/", "");
+  // console.log(frontMatter.tags.split(","), typeof frontMatter.tags);
+
+  const shareUrl = "https://www.tshiteej.com/" + router.asPath;
+  const title = frontMatter.title;
+  const caption = frontMatter.summary;
+  const hashTags = frontMatter.tags.split(",").map(ele => {
+    return ele.trim();
+  });
+  const related = "tshiteej";
+  const source = "https://www.tshiteej.com/";
   return (
     <>
       <Container>
         <Head>
           <title>{frontMatter.title} | Tshiteej</title>
+          <link
+            rel='icon'
+            href='https://www.tshiteej.com/tb.png'
+            type='image/icon type'
+          />
+          <meta property='og:url' content={shareUrl} />
+          <meta property='og:title' content={frontMatter.title} />
+          <meta property='og:description' content={frontMatter.summary} />
+          <meta name='twitter:card' content='summary' />
+          <meta property='og:image' content='https://www.tshiteej.com/tb.png' />
+          <meta name='og:keywords' content={frontMatter.tags} />
+          <meta name='og:author' content='Tshiteej Bhardwaj' />
         </Head>
         <Stack
           as='article'
@@ -67,16 +103,69 @@ export default function BlogLayout({ children, frontMatter }) {
                 />
                 <Text fontSize='sm' color={textColor[colorMode]}>
                   {frontMatter.author}
-                  {" / "}
+                  <br />
+
                   {format(parseISO(frontMatter.publishedDate), "MMM dd, yyyy")}
+                  {" | "}
+                  {frontMatter.readingTime.text}
                 </Text>
               </Flex>
-              <Text fontSize='sm' color='gray.500' minWidth='100px' mt={[2, 0]}>
-                {frontMatter.readingTime.text}
-              </Text>
+              <Flex direction='row' my={3}>
+                <Box mx={1}>
+                  <LinkedinShareButton
+                    url={shareUrl}
+                    summary={caption}
+                    source={source}
+                    className='socialshare'
+                  >
+                    <LinkedinIcon size={32} round />
+                  </LinkedinShareButton>
+                </Box>
+                <Box mx={1}>
+                  <TwitterShareButton
+                    url={shareUrl}
+                    title={title}
+                    via={related}
+                    hashtags={hashTags}
+                    related={[related]}
+                    className='socialshare'
+                  >
+                    <TwitterIcon size={32} round />
+                  </TwitterShareButton>
+                </Box>
+                <Box mx={1}>
+                  <WhatsappShareButton
+                    url={shareUrl}
+                    title={title}
+                    separator=' | '
+                    className='socialshare'
+                  >
+                    <WhatsappIcon size={32} round />
+                  </WhatsappShareButton>
+                </Box>
+                <Box mx={1}>
+                  <FacebookShareButton
+                    url={shareUrl}
+                    quote={title}
+                    hashtag={hashTags}
+                    className='socialshare'
+                  >
+                    <FacebookIcon size={32} round />
+                  </FacebookShareButton>
+                </Box>
+              </Flex>
             </Flex>
           </Flex>
           {children}
+          <Stack direction='row'>
+            {hashTags.map(i => {
+              return (
+                <Badge variant='subtle' py={2} px={3}>
+                  {i}
+                </Badge>
+              );
+            })}
+          </Stack>
         </Stack>
       </Container>
       <Footer />
