@@ -53,11 +53,6 @@ export default function BlogLayout({ children, frontMatter }) {
       <Container>
         <Head>
           <title>{frontMatter.title} | Tshiteej</title>
-          <link
-            rel='icon'
-            href='https://www.tshiteej.com/tb.png'
-            type='image/icon type'
-          />
           <meta property='og:url' content={shareUrl} />
           <meta property='og:title' content={frontMatter.title} />
           <meta property='og:description' content={frontMatter.summary} />
