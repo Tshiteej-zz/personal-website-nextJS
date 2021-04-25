@@ -40,7 +40,7 @@ export default function BlogLayout({ children, frontMatter }) {
   const slug = router.asPath.replace("/blog/", "");
   // console.log(frontMatter.tags.split(","), typeof frontMatter.tags);
 
-  const shareUrl = "https://www.tshiteej.com/" + router.asPath;
+  const shareUrl = "https://www.tshiteej.com" + router.asPath;
   const title = frontMatter.title;
   const caption = frontMatter.summary;
   const hashTags = frontMatter.tags.split(",").map(ele => {
@@ -53,6 +53,7 @@ export default function BlogLayout({ children, frontMatter }) {
       <Container>
         <Head>
           <title>{frontMatter.title} | Tshiteej</title>
+          <link rel='canonical' href={shareUrl} />
           <meta property='og:url' content={shareUrl} />
           <meta property='og:title' content={frontMatter.title} />
           <meta property='og:description' content={frontMatter.summary} />

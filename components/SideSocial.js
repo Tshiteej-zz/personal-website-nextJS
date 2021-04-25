@@ -40,6 +40,7 @@ function SideSocial() {
         whileHover={{ scale: 1.5, y: "-10px", color: "teal" }}
         my={4}
         as='a'
+        rel='noreferrer'
         href='https://github.com/Tshiteej'
         target='_blank'
       >
@@ -49,6 +50,7 @@ function SideSocial() {
         whileHover={{ scale: 1.5, y: "-10px", color: "teal" }}
         my={4}
         as='a'
+        rel='noreferrer'
         href='https://stackoverflow.com/users/13223807/tshiteej'
         target='_blank'
       >
@@ -58,6 +60,7 @@ function SideSocial() {
         whileHover={{ scale: 1.5, y: "-10px", color: "teal" }}
         my={4}
         as='a'
+        rel='noreferrer'
         href='https://twitter.com/tshiteej'
         target='_blank'
       >
@@ -67,6 +70,7 @@ function SideSocial() {
         whileHover={{ scale: 1.5, y: "-10px", color: "teal" }}
         my={4}
         as='a'
+        rel='noreferrer'
         href='https://www.instagram.com/tshiteej/'
         target='_blank'
       >
@@ -76,6 +80,7 @@ function SideSocial() {
         whileHover={{ scale: 1.5, y: "-10px", color: "teal" }}
         my={4}
         as='a'
+        rel='noreferrer'
         href='https://www.linkedin.com/in/tshiteej/'
         target='_blank'
       >

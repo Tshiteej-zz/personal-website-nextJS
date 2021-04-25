@@ -28,6 +28,7 @@ function Footer() {
           my={4}
           mx={4}
           as='a'
+          rel='noreferrer'
           href='https://github.com/Tshiteej'
           target='_blank'
           _hover={{ width: "20px" }}
@@ -38,6 +39,7 @@ function Footer() {
           my={4}
           mx={4}
           as='a'
+          rel='noreferrer'
           href='https://stackoverflow.com/users/13223807/tshiteej'
           target='_blank'
           _hover={{ width: "20px" }}
@@ -48,6 +50,7 @@ function Footer() {
           my={4}
           mx={4}
           as='a'
+          rel='noreferrer'
           href='https://twitter.com/tbhardwaj97'
           target='_blank'
           _hover={{ width: "20px" }}
@@ -58,6 +61,7 @@ function Footer() {
           my={4}
           mx={4}
           as='a'
+          rel='noreferrer'
           href='https://www.instagram.com/tshiteej/'
           target='_blank'
           _hover={{ width: "20px" }}
@@ -68,6 +72,7 @@ function Footer() {
           my={4}
           mx={4}
           as='a'
+          rel='noreferrer'
           href='https://www.linkedin.com/in/tshiteej/'
           target='_blank'
           _hover={{ width: "20px" }}

@@ -38,8 +38,12 @@ export default class MyDocument extends NextDocument {
           <meta property='og:image' content='https://www.tshiteej.com/tb.png' />
           <meta
             property='og:description'
-            content='Portfolio site of Tshiteej Bhardwaj'
+            content='Portfolio site of Tshiteej Bhardwaj.'
           />
+          <meta
+            name='description'
+            content='Portfolio site of Tshiteej Bhardwaj.'
+          ></meta>
           <meta
             name='og:keywords'
             content='HTML, CSS, NEXTJS, JavaScript, PHP, Python, Automation, Regex, JS'
